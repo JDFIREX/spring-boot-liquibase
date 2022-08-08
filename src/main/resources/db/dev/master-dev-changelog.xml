@@ -5,10 +5,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd" >
 
-    <changeSet id="1.0.2-create-test-table" author="JDFIREX"  >
-        <addColumn tableName="test">
-            <column name="phone" type="varchar(255)" />
-        </addColumn>
-    </changeSet>
+    <include file="init-dev-changelog.xml" relativeToChangelogFile="true" context="dev" />
+    <include file="changelog/1.0.0/changelog-1.0.0.xml" relativeToChangelogFile="true" context="dev" />
 
 </databaseChangeLog>

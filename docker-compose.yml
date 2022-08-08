@@ -1,11 +1,20 @@
 version: "3.8"
 
 services:
-  spring-boot-liquibase-psql:
+  spring-liquibase-psql:
     image: postgres
     restart: always
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: spring-boot-liquibase
+      POSTGRES_DB: spring-liquibase
+  spring-liquibase-dev-psql:
+    image: postgres
+    restart: always
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: spring-liquibase-dev
+

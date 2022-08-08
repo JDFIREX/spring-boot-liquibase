@@ -73,7 +73,10 @@
 		<profile>
 			<id>dev</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>environment</name>
+					<value>dev</value>
+				</property>
 			</activation>
 			<build>
 				<plugins>
@@ -97,13 +100,19 @@
 		</profile>
 		<profile>
 			<id>prod</id>
+			<activation>
+				<property>
+					<name>environment</name>
+					<value>prod</value>
+				</property>
+			</activation>
 			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.liquibase</groupId>
 						<artifactId>liquibase-maven-plugin</artifactId>
 						<configuration>
-							<contexts>dev</contexts>
+							<contexts>prod</contexts>
 							<propertyFile>src/main/resources/liquibase-prod.properties</propertyFile>
 						</configuration>
 					</plugin>

@@ -18,4 +18,18 @@
         </addColumn>
     </changeSet>
 
+    <changeSet id="1.0.3-1" author="JDFIREX">
+        <addColumn tableName="test-2">
+            <column name="test2" type="varchar(255)" />
+            <column name="test3" type="varchar(255)" />
+            <column name="test4" type="varchar(255)" />
+        </addColumn>
+        <addColumn tableName="test">
+            <column name="test1" type="varchar(255)" />
+            <column name="test2" type="varchar(255)" />
+            <column name="test3" type="varchar(255)" />
+            <column name="test4" type="varchar(255)" />
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>
